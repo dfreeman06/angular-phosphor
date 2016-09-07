@@ -1,0 +1,274 @@
+@import '../../../node_modules/phosphor/styles/base.css';
+
+phosphor {
+    //display: block;
+    //flex: 1 1 auto;
+}
+
+.ng-scope, .ng-isolate-scope {
+    display: flex;
+    flex: 1 1 auto;
+    width: 100%;
+    min-height: 100%;
+}
+
+
+/*-----------------------------------------------------------------------------
+| TabBar
+|----------------------------------------------------------------------------*/
+.p-TabBar {
+    overflow: visible;
+}
+
+.p-TabBar.p-mod-horizontal {
+    min-height: 24px;
+    max-height: 24px;
+}
+
+.p-TabBar.p-mod-vertical {
+    min-width: 80px;
+    max-width: 80px;
+}
+
+.p-TabBar.p-mod-top {
+    border-bottom: 1px solid #C0C0C0;
+}
+
+.p-TabBar.p-mod-bottom {
+    border-top: 1px solid #C0C0C0;
+}
+
+.p-TabBar.p-mod-left {
+    border-right: 1px solid #C0C0C0;
+}
+
+.p-TabBar.p-mod-right {
+    border-left: 1px solid #C0C0C0;
+}
+
+.p-TabBar-content {
+    min-width: 0;
+    min-height: 0;
+}
+
+.p-TabBar.p-mod-top > .p-TabBar-content {
+    align-items: flex-end;
+}
+
+.p-TabBar.p-mod-bottom > .p-TabBar-content {
+    align-items: flex-start;
+}
+
+.p-TabBar-tab {
+    padding: 0px 10px;
+    background: #E5E5E5;
+    border: 1px solid #C0C0C0;
+    font: 12px Helvetica, Arial, sans-serif;
+}
+
+.p-TabBar-tab.p-mod-current {
+    background: white;
+}
+
+.p-TabBar-tab:hover:not(.p-mod-current) {
+    background: #F0F0F0;
+}
+
+.p-TabBar.p-mod-top .p-TabBar-tab,
+.p-TabBar.p-mod-bottom .p-TabBar-tab {
+    flex: 0 1 125px;
+    min-height: 20px;
+    max-height: 20px;
+    min-width: 35px;
+    margin-left: -1px;
+    line-height: 20px;
+}
+
+.p-TabBar.p-mod-top .p-TabBar-tab {
+    border-bottom: none;
+}
+
+.p-TabBar.p-mod-bottom .p-TabBar-tab {
+    border-top: none;
+}
+
+.p-TabBar.p-mod-top .p-TabBar-tab:first-child,
+.p-TabBar.p-mod-bottom .p-TabBar-tab:first-child {
+    margin-left: 0;
+}
+
+.p-TabBar.p-mod-top .p-TabBar-tab.p-mod-current,
+.p-TabBar.p-mod-bottom .p-TabBar-tab.p-mod-current {
+    min-height: 23px;
+    max-height: 23px;
+}
+
+.p-TabBar.p-mod-top .p-TabBar-tab.p-mod-current {
+    transform: translateY(1px);
+}
+
+.p-TabBar.p-mod-bottom .p-TabBar-tab.p-mod-current {
+    transform: translateY(-1px);
+}
+
+.p-TabBar.p-mod-left .p-TabBar-tab,
+.p-TabBar.p-mod-right .p-TabBar-tab {
+    flex: 0 1 40px;
+    margin-top: -1px;
+    line-height: 40px;
+}
+
+.p-TabBar.p-mod-left .p-TabBar-tab {
+    border-right: none;
+}
+
+.p-TabBar.p-mod-right .p-TabBar-tab {
+    border-left: none;
+}
+
+.p-TabBar.p-mod-left .p-TabBar-tab:first-child,
+.p-TabBar.p-mod-right .p-TabBar-tab:first-child {
+    margin-top: 0;
+}
+
+.p-TabBar.p-mod-left .p-TabBar-tab.p-mod-current,
+.p-TabBar.p-mod-right .p-TabBar-tab.p-mod-current {
+    min-width: 80px;
+    max-width: 80px;
+}
+
+.p-TabBar.p-mod-right .p-TabBar-tab.p-mod-current {
+    transform: translateX(-1px);
+}
+
+.p-TabBar-tabIcon,
+.p-TabBar-tabLabel,
+.p-TabBar-tabCloseIcon {
+    display: inline-block;
+}
+
+.p-TabBar-tab.p-mod-closable > .p-TabBar-tabCloseIcon {
+    margin-left: 4px;
+}
+
+.p-TabBar-tab.p-mod-closable > .p-TabBar-tabCloseIcon:before {
+    content: '\f00d';
+    font-family: FontAwesome;
+}
+
+.p-TabPanel-stackedPanel {
+    padding: 10px;
+    background: white;
+    border: 1px solid #C0C0C0;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.p-TabPanel.p-mod-top-to-bottom > .p-TabPanel-stackedPanel {
+    border-top: none;
+}
+
+.p-TabPanel.p-mod-bottom-to-top > .p-TabPanel-stackedPanel {
+    border-bottom: none;
+}
+
+.p-TabPanel.p-mod-left-to-right > .p-TabPanel-stackedPanel {
+    border-left: none;
+}
+
+.p-TabPanel.p-mod-right-to-left > .p-TabPanel-stackedPanel {
+    border-right: none;
+}
+
+/*-----------------------------------------------------------------------------
+| DockPanel
+|----------------------------------------------------------------------------*/
+.p-DockPanel-tabPanel {
+    padding-right: 2px;
+    padding-bottom: 2px;
+}
+
+.p-DockPanel-tabPanel > .p-StackedPanel {
+    padding: 10px;
+    background: white;
+    border: 1px solid #C0C0C0;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.p-DockPanel-overlay {
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px dashed black;
+    transition-property: top, left, right, bottom;
+    transition-duration: 150ms;
+    transition-timing-function: ease;
+}
+
+.p-DockPanel-overlay.p-mod-root-top,
+.p-DockPanel-overlay.p-mod-root-left,
+.p-DockPanel-overlay.p-mod-root-right,
+.p-DockPanel-overlay.p-mod-root-bottom,
+.p-DockPanel-overlay.p-mod-root-center {
+    border-width: 2px;
+}
+
+.p-TabBar-tab.p-mod-drag-image {
+    min-height: 23px;
+    max-height: 23px;
+    min-width: 125px;
+    border: none;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    transform: translateX(-40%) translateY(-58%);
+}
+
+/*-----------------------------------------------------------------------------
+| General
+|----------------------------------------------------------------------------*/
+body {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.p-CommandPalette {
+    min-width: 300px;
+    border-right: 1px solid #DDDDDD;
+}
+
+.p-DockPanel {
+    padding: 4px;
+}
+
+.p-MenuBar {
+    flex: 0 0 auto;
+}
+
+.content {
+    min-width: 50px;
+    min-height: 50px;
+}
+
+.content > input {
+    margin: 8px;
+}
+
+.red {
+    background: #E74C3C;
+}
+
+.yellow {
+    background: #F1C40F;
+}
+
+.green {
+    background: #27AE60;
+}
+
+.blue {
+    background: #3498DB;
+}

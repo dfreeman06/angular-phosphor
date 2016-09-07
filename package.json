@@ -1,0 +1,48 @@
+{
+  "name": "angular-phosphor",
+  "version": "0.0.1",
+  "description": "A simple prototype for angular integration with phosphor.",
+  "scripts": {
+    "build": "webpack --bail --progress --profile -d",
+    "develop": "webpack-dev-server -d --history-api-fallback --inline --progress --colors --port 27380",
+    "test": "karma start"
+  },
+  "devDependencies": {
+    "angular-mocks": "^1.5.8",
+    "babel-core": "^6.13.2",
+    "babel-eslint": "^6.1.2",
+    "babel-loader": "^6.2.4",
+    "babel-plugin-transform-runtime": "^6.12.0",
+    "babel-preset-es2015": "^6.13.2",
+    "babel-register": "^6.11.6",
+    "babel-runtime": "^6.11.6",
+    "css-loader": "^0.23.1",
+    "eslint": "^3.2.2",
+    "eslint-loader": "^1.5.0",
+    "html-loader": "^0.4.3",
+    "isparta-loader": "^2.0.0",
+    "jasmine-core": "^2.4.1",
+    "karma": "^1.1.2",
+    "karma-coverage": "^1.1.1",
+    "karma-jasmine": "^1.0.2",
+    "karma-phantomjs-launcher": "^1.0.1",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-spec-reporter": "0.0.26",
+    "karma-webpack": "^1.8.0",
+    "node-sass": "^3.8.0",
+    "phantomjs-prebuilt": "^2.1.11",
+    "raw-loader": "^0.5.1",
+    "sass-loader": "^4.0.0",
+    "slash": "^1.0.0",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1",
+    "yargs": "^5.0.0"
+  },
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-ui-router": "^0.3.1",
+    "lodash": "^4.15.0",
+    "phosphor": "^0.6.1"
+  }
+}
